@@ -2,10 +2,10 @@ CREATE TABLE packets (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     source_ip TEXT NOT NULL,
     dest_ip   TEXT NOT NULL,
-    bssid     TEXT NOT NULL,             -- AP MAC address
-    band      TEXT NOT NULL,             -- e.g. '2.4GHz', '5GHz', '6GHz'
-    frequency INTEGER NOT NULL,          -- channel center frequency in MHz
-    protocol  TEXT NOT NULL,
+    bssid     TEXT NOT NULL,                -- AP MAC address
+    band      TEXT NOT NULL,                -- e.g. '2.4GHz', '5GHz', '6GHz'
+    frequency INTEGER NOT NULL,             -- channel center frequency in MHz
+    protocol  TEXT NOT NULL,                -- e.g 'tcp', 'udp'
     length    INTEGER NOT NULL,
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 );
